@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamirCyber - تیم امنیت سایبری</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        
+        .language-switcher {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .skill-item:hover .skill-icon {
+            transform: rotate(360deg);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .team-social {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover .team-social {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-gray-900 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-shield-alt text-blue-500 text-2xl ml-2"></i>
+                <h1 class="text-xl font-bold text-white">SamirCyber</h1>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="#home" class="text-gray-300 hover:text-blue-400 transition">خانه</a></li>
+                    <li><a href="#about" class="text-gray-300 hover:text-blue-400 transition">درباره ما</a></li>
+                    <li><a href="#team" class="text-gray-300 hover:text-blue-400 transition">اعضای تیم</a></li>
+                    <li><a href="#services" class="text-gray-300 hover:text-blue-400 transition">خدمات</a></li>
+                    <li><a href="#skills" class="text-gray-300 hover:text-blue-400 transition">مهارت‌ها</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-blue-400 transition">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <button class="md:hidden text-gray-300 focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-gray-800" id="mobile-menu">
+            <div class="container mx-auto px-4 py-2">
+                <ul class="flex flex-col space-y-3 py-3">
+                    <li><a href="#home" class="block text-gray-300 hover:text-blue-400 transition">خانه</a></li>
+                    <li><a href="#about" class="block text-gray-300 hover:text-blue-400 transition">درباره ما</a></li>
+                    <li><a href="#team" class="block text-gray-300 hover:text-blue-400 transition">اعضای تیم</a></li>
+                    <li><a href="#services" class="block text-gray-300 hover:text-blue-400 transition">خدمات</a></li>
+                    <li><a href="#skills" class="block text-gray-300 hover:text-blue-400 transition">مهارت‌ها</a></li>
+                    <li><a href="#contact" class="block text-gray-300 hover:text-blue-400 transition">تماس</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">تیم امنیت سایبری <span class="text-blue-400">SamirCyber</span></h2>
+                <p class="text-lg text-gray-300 mb-6">متخصص در امنیت دیجیتال و محافظت از حریم خصوصی شما در فضای مجازی</p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">تماس با ما</a>
+                    <a href="#services" class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium transition">خدمات ما</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cybersecurity" class="rounded-lg shadow-xl w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-2">درباره تیم ما</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Team 313" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+                <div class="md:w-1/2 md:pr-8">
+                    <h3 class="text-2xl font-semibold text-white mb-4">تیم سایبری 313</h3>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        تیم SamirCyber متشکل از متخصصان امنیت سایبری با سال‌ها تجربه در زمینه هک اخلاقی و محافظت از کاربران در فضای مجازی است. ما با نام تیم 313 شناخته می‌شویم و مأموریت اصلی ما ایجاد امنیت و آرامش برای کاربران در دنیای دیجیتال است.
+                    </p>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        با ترکیبی از دانش فنی پیشرفته و اخلاق حرفه‌ای، ما به شما کمک می‌کنیم تا از حریم خصوصی خود محافظت کنید و در برابر تهدیدات سایبری ایمن بمانید.
+                    </p>
+                    <div class="flex items-center mt-6">
+                        <div class="flex -space-x-2">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Team Member">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/women/2.jpg" alt="Team Member">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/men/3.jpg" alt="Team Member">
+                        </div>
+                        <span class="text-sm text-gray-400 mr-3">اعضای تیم ما</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-2">اعضای تیم ما</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">متخصصان با تجربه ما که همیشه آماده خدمت رسانی به شما هستند</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/samir.jpg" alt="SamirCyber" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">سمیر سایبری</h3>
+                                <p class="text-blue-400">بنیانگذار و مدیر امنیت</p>
+                            </div>
+                            <div class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">رهبر تیم</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            با بیش از 10 سال تجربه در حوزه امنیت سایبری و هک اخلاقی. متخصص در تست نفوذ و امنیت شبکه.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/SulaimanCyber.jpg" alt="SulaimanCyber" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">سلیمان سایبری</h3>
+                                <p class="text-purple-400">متخصص امنیت شبکه‌های اجتماعی</p>
+                            </div>
+                            <div class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">مدیر ارتباطات</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            متخصص در امنیت حساب‌های کاربری و رفع مشکلات امنیتی در شبکه‌های اجتماعی مانند واتساپ و تلگرام.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/ElyasJuzjani.jpg" alt="ElyasJuzjani" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">الیاس جوزجانی</h3>
+                                <p class="text-green-400">متخصص امنیت داده و رمزنگاری</p>
+                            </div>
+                            <div class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">تحلیلگر امنیتی</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            کارشناس ارشد امنیت داده و سیستم‌های رمزنگاری. مسئول حفاظت از اطلاعات حساس کاربران.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/EGO.jpg" alt="EGO" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">اِیگو</h3>
+                                <p class="text-yellow-400">متخصص تست نفوذ وب</p>
+                            </div>
+                            <div class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">هکر اخلاقی</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            متخصص در شناسایی و رفع آسیب‌پذیری‌های وب اپلیکیشن‌ها. دارای گواهینامه‌های بین‌المللی امنیت.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 5 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/MustafaCyber.jpg" alt="MustafaCyber" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">مصطفی سایبری</h3>
+                                <p class="text-red-400">متخصص امنیت موبایل</p>
+                            </div>
+                            <div class="bg-red-600 text-white px-3 py-1 rounded-full text-sm">تحلیلگر موبایل</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            متخصص در امنیت اپلیکیشن‌های موبایل و سیستم‌های عامل اندروید و iOS. مسئول بررسی امنیتی اپ‌ها.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 6 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/Zahid.jpg" alt="Zahid" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">زاهد</h3>
+                                <p class="text-indigo-400">متخصص امنیت سرویس‌های ابری</p>
+                            </div>
+                            <div class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm">مهندس ابری</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            متخصص در امنیت سرویس‌های ابری و محاسبات ابری. مسئول امنیت زیرساخت‌های ابری تیم.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition">
+                    <i class="fas fa-users mr-2"></i> به تیم ما بپیوندید
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-2">مهارت‌های تخصصی ما</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="skill-item bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                    <div class="skill-icon w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center mb-4 transition duration-500">
+                        <i class="fas fa-user-secret text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">هک اخلاقی</h3>
+                    <p class="text-gray-300">
+                        شناسایی و رفع آسیب‌پذیری‌های سیستم‌ها قبل از سوءاستفاده هکرهای مخرب. ما با استفاده از تکنیک‌های هک اخلاقی به شما کمک می‌کنیم سیستم‌های خود را ایمن کنید.
+                    </p>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="skill-item bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                    <div class="skill-icon w-14 h-14 bg-green-600 rounded-full flex items-center justify-center mb-4 transition duration-500">
+                        <i class="fas fa-ban text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">گزارش و مسدودسازی اکانت‌های متخلف</h3>
+                    <p class="text-gray-300">
+                        شناسایی و گزارش حساب‌های کاربری متخلف در پلتفرم‌های مختلف. ما به شما کمک می‌کنیم تا از شر حساب‌های جعلی و مخرب خلاص شوید.
+                    </p>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="skill-item bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                    <div class="skill-icon w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center mb-4 transition duration-500">
+                        <i class="fas fa-lock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">محافظت از حساب‌های کاربران</h3>
+                    <p class="text-gray-300">
+                        ارائه راهکارهای جامع برای افزایش امنیت حساب‌های کاربری شما در شبکه‌های اجتماعی و سرویس‌های مختلف. ما به شما آموزش می‌دهیم چگونه از حساب خود محافظت کنید.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-2">خدمات ما</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-blue-700 flex items-center justify-center">
+                        <i class="fab fa-whatsapp text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">رفع بن واتساپ</h3>
+                        <p class="text-gray-300 mb-4">
+                            در صورت مسدود شدن حساب واتساپ شما، ما می‌توانیم به شما در رفع این مشکل کمک کنیم و حساب شما را فعال نماییم.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-green-600 flex items-center justify-center">
+                        <i class="fas fa-flag text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">گزارش تخلف در واتساپ</h3>
+                        <p class="text-gray-300 mb-4">
+                            اگر با حساب‌های متخلف یا مزاحم در واتساپ مواجه شده‌اید، ما می‌توانیم این حساب‌ها را گزارش و مسدود کنیم.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-blue-500 flex items-center justify-center">
+                        <i class="fab fa-telegram text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">خدمات امنیتی تلگرام</h3>
+                        <p class="text-gray-300 mb-4">
+                            ارائه راهکارهای امنیتی برای حساب تلگرام شما، از جمله احراز هویت دو مرحله‌ای و محافظت در برابر هک.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-red-600 flex items-center justify-center">
+                        <i class="fas fa-fish text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">بررسی و حذف کانال‌های فیشینگ</h3>
+                        <p class="text-gray-300 mb-4">
+                            شناسایی و گزارش کانال‌ها و گروه‌های فیشینگ در تلگرام و دیگر پلتفرم‌ها برای محافظت از کاربران.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-purple-600 flex items-center justify-center">
+                        <i class="fas fa-crown text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">خدمات خاص کاربران VIP</h3>
+                        <p class="text-gray-300 mb-4">
+                            ارائه خدمات اختصاصی و پشتیبانی ویژه برای کاربران VIP با نیازهای امنیتی خاص و حساس.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-yellow-600 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">مشاوره امنیت سایبری</h3>
+                        <p class="text-gray-300 mb-4">
+                            ارائه مشاوره تخصصی در زمینه امنیت دیجیتال و راهکارهای محافظت از حریم خصوصی در فضای مجازی.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-2">تماس با ما</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold text-white mb-4">راه‌های ارتباطی</h3>
+                    <p class="text-gray-300 mb-6">
+                        برای دریافت خدمات یا مشاوره می‌توانید از طریق راه‌های ارتباطی زیر با ما در تماس باشید. تیم پشتیبانی ما در سریع‌ترین زمان ممکن پاسخگوی شما خواهد بود.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-whatsapp text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium">واتساپ</h4>
+                                <a href="https://wa.me/93790154633" class="text-gray-300 hover:text-blue-400">ارسال پیام مستقیم</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-telegram text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium">تلگرام</h4>
+                                <a href="https://t.me/samir_zone" class="text-gray-300 hover:text-blue-400">@SamirCyber</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-instagram text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium">اینستاگرام</h4>
+                                <a href="https://instagram.com/0xf13_313" class="text-gray-300 hover:text-blue-400">@SamirCyber</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium">ایمیل</h4>
+                                <a href="mailto:info@sc.sczero.com" class="text-gray-300 hover:text-blue-400">info@sc.sczero.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-white mb-4">فرم تماس</h3>
+                        
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-300 mb-2">نام شما</label>
+                            <input type="text" id="name" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="contact" class="block text-gray-300 mb-2">شماره تماس یا ایمیل</label>
+                            <input type="text" id="contact" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="service" class="block text-gray-300 mb-2">خدمات مورد نیاز</label>
+                            <select id="service" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">-- انتخاب کنید --</option>
+                                <option value="whatsapp-ban">رفع بن واتساپ</option>
+                                <option value="whatsapp-report">گزارش تخلف در واتساپ</option>
+                                <option value="telegram-security">خدمات امنیتی تلگرام</option>
+                                <option value="phishing">بررسی و حذف کانال‌های فیشینگ</option>
+                                <option value="vip">خدمات VIP</option>
+                                <option value="consulting">مشاوره امنیت سایبری</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-300 mb-2">پیام شما</label>
+                            <textarea id="message" rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition">ارسال درخواست</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-blue-500 text-2xl ml-2"></i>
+                        <h2 class="text-xl font-bold text-white">SamirCyber</h2>
+                    </div>
+                    <p class="text-gray-400 mt-2">تیم تخصصی امنیت سایبری 313</p>
+                </div>
+                
+                <div class="flex space-x-6 space-x-reverse">
+                    <a href="https://wa.me/93790154633" class="text-gray-400 hover:text-green-400 text-xl">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/samir_zone" class="text-gray-400 hover:text-blue-400 text-xl">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://instagram.com/0xf13_313" class="text-gray-400 hover:text-pink-400 text-xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-500">
+                    © 2023 SamirCyber. تمامی حقوق محفوظ است.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <div class="relative">
+            <b<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamirCyber - تیم امنیت سایبری</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        
+        .language-switcher {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .skill-item:hover .skill-icon {
+            transform: rotate(360deg);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .team-social {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover .team-social {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-gray-900 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-shield-alt text-blue-500 text-2xl ml-2"></i>
+                <h1 class="text-xl font-bold text-white">SamirCyber</h1>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="#home" class="text-gray-300 hover:text-blue-400 transition">خانه</a></li>
+                    <li><a href="#about" class="text-gray-300 hover:text-blue-400 transition">درباره ما</a></li>
+                    <li><a href="#team" class="text-gray-300 hover:text-blue-400 transition">اعضای تیم</a></li>
+                    <li><a href="#services" class="text-gray-300 hover:text-blue-400 transition">خدمات</a></li>
+                    <li><a href="#skills" class="text-gray-300 hover:text-blue-400 transition">مهارت‌ها</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-blue-400 transition">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <button class="md:hidden text-gray-300 focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-gray-800" id="mobile-menu">
+            <div class="container mx-auto px-4 py-2">
+                <ul class="flex flex-col space-y-3 py-3">
+                    <li><a href="#home" class="block text-gray-300 hover:text-blue-400 transition">خانه</a></li>
+                    <li><a href="#about" class="block text-gray-300 hover:text-blue-400 transition">درباره ما</a></li>
+                    <li><a href="#team" class="block text-gray-300 hover:text-blue-400 transition">اعضای تیم</a></li>
+                    <li><a href="#services" class="block text-gray-300 hover:text-blue-400 transition">خدمات</a></li>
+                    <li><a href="#skills" class="block text-gray-300 hover:text-blue-400 transition">مهارت‌ها</a></li>
+                    <li><a href="#contact" class="block text-gray-300 hover:text-blue-400 transition">تماس</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">تیم امنیت سایبری <span class="text-blue-400">SamirCyber</span></h2>
+                <p class="text-lg text-gray-300 mb-6">متخصص در امنیت دیجیتال و محافظت از حریم خصوصی شما در فضای مجازی</p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">تماس با ما</a>
+                    <a href="#services" class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium transition">خدمات ما</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cybersecurity" class="rounded-lg shadow-xl w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-2">درباره تیم ما</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Team 313" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+                <div class="md:w-1/2 md:pr-8">
+                    <h3 class="text-2xl font-semibold text-white mb-4">تیم سایبری 313</h3>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        تیم SamirCyber متشکل از متخصصان امنیت سایبری با سال‌ها تجربه در زمینه هک اخلاقی و محافظت از کاربران در فضای مجازی است. ما با نام تیم 313 شناخته می‌شویم و مأموریت اصلی ما ایجاد امنیت و آرامش برای کاربران در دنیای دیجیتال است.
+                    </p>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        با ترکیبی از دانش فنی پیشرفته و اخلاق حرفه‌ای، ما به شما کمک می‌کنیم تا از حریم خصوصی خود محافظت کنید و در برابر تهدیدات سایبری ایمن بمانید.
+                    </p>
+                    <div class="flex items-center mt-6">
+                        <div class="flex -space-x-2">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Team Member">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/women/2.jpg" alt="Team Member">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/men/3.jpg" alt="Team Member">
+                        </div>
+                        <span class="text-sm text-gray-400 mr-3">اعضای تیم ما</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-2">اعضای تیم ما</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">متخصصان با تجربه ما که همیشه آماده خدمت رسانی به شما هستند</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/samir.jpg" alt="SamirCyber" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">سمیر سایبری</h3>
+                                <p class="text-blue-400">بنیانگذار و مدیر امنیت</p>
+                            </div>
+                            <div class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">رهبر تیم</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            با بیش از 10 سال تجربه در حوزه امنیت سایبری و هک اخلاقی. متخصص در تست نفوذ و امنیت شبکه.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/SulaimanCyber.jpg" alt="SulaimanCyber" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">سلیمان سایبری</h3>
+                                <p class="text-purple-400">متخصص امنیت شبکه‌های اجتماعی</p>
+                            </div>
+                            <div class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">مدیر ارتباطات</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            متخصص در امنیت حساب‌های کاربری و رفع مشکلات امنیتی در شبکه‌های اجتماعی مانند واتساپ و تلگرام.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/ElyasJuzjani.jpg" alt="ElyasJuzjani" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">الیاس جوزجانی</h3>
+                                <p class="text-green-400">متخصص امنیت داده و رمزنگاری</p>
+                            </div>
+                            <div class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">تحلیلگر امنیتی</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            کارشناس ارشد امنیت داده و سیستم‌های رمزنگاری. مسئول حفاظت از اطلاعات حساس کاربران.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/EGO.jpg" alt="EGO" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">اِیگو</h3>
+                                <p class="text-yellow-400">متخصص تست نفوذ وب</p>
+                            </div>
+                            <div class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">هکر اخلاقی</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            متخصص در شناسایی و رفع آسیب‌پذیری‌های وب اپلیکیشن‌ها. دارای گواهینامه‌های بین‌المللی امنیت.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 5 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/MustafaCyber.jpg" alt="MustafaCyber" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">مصطفی سایبری</h3>
+                                <p class="text-red-400">متخصص امنیت موبایل</p>
+                            </div>
+                            <div class="bg-red-600 text-white px-3 py-1 rounded-full text-sm">تحلیلگر موبایل</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            متخصص در امنیت اپلیکیشن‌های موبایل و سیستم‌های عامل اندروید و iOS. مسئول بررسی امنیتی اپ‌ها.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 6 -->
+                <div class="team-card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-500 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"></div>
+                    <img src="images/Zahid.jpg" alt="Zahid" class="w-full h-64 object-cover">
+                    
+                    <div class="p-6 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">زاهد</h3>
+                                <p class="text-indigo-400">متخصص امنیت سرویس‌های ابری</p>
+                            </div>
+                            <div class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm">مهندس ابری</div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            متخصص در امنیت سرویس‌های ابری و محاسبات ابری. مسئول امنیت زیرساخت‌های ابری تیم.
+                        </p>
+                        
+                        <div class="team-social flex space-x-3 space-x-reverse">
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition">
+                    <i class="fas fa-users mr-2"></i> به تیم ما بپیوندید
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-2">مهارت‌های تخصصی ما</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="skill-item bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                    <div class="skill-icon w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center mb-4 transition duration-500">
+                        <i class="fas fa-user-secret text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">هک اخلاقی</h3>
+                    <p class="text-gray-300">
+                        شناسایی و رفع آسیب‌پذیری‌های سیستم‌ها قبل از سوءاستفاده هکرهای مخرب. ما با استفاده از تکنیک‌های هک اخلاقی به شما کمک می‌کنیم سیستم‌های خود را ایمن کنید.
+                    </p>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="skill-item bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                    <div class="skill-icon w-14 h-14 bg-green-600 rounded-full flex items-center justify-center mb-4 transition duration-500">
+                        <i class="fas fa-ban text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">گزارش و مسدودسازی اکانت‌های متخلف</h3>
+                    <p class="text-gray-300">
+                        شناسایی و گزارش حساب‌های کاربری متخلف در پلتفرم‌های مختلف. ما به شما کمک می‌کنیم تا از شر حساب‌های جعلی و مخرب خلاص شوید.
+                    </p>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="skill-item bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                    <div class="skill-icon w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center mb-4 transition duration-500">
+                        <i class="fas fa-lock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">محافظت از حساب‌های کاربران</h3>
+                    <p class="text-gray-300">
+                        ارائه راهکارهای جامع برای افزایش امنیت حساب‌های کاربری شما در شبکه‌های اجتماعی و سرویس‌های مختلف. ما به شما آموزش می‌دهیم چگونه از حساب خود محافظت کنید.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-2">خدمات ما</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-blue-700 flex items-center justify-center">
+                        <i class="fab fa-whatsapp text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">رفع بن واتساپ</h3>
+                        <p class="text-gray-300 mb-4">
+                            در صورت مسدود شدن حساب واتساپ شما، ما می‌توانیم به شما در رفع این مشکل کمک کنیم و حساب شما را فعال نماییم.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-green-600 flex items-center justify-center">
+                        <i class="fas fa-flag text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">گزارش تخلف در واتساپ</h3>
+                        <p class="text-gray-300 mb-4">
+                            اگر با حساب‌های متخلف یا مزاحم در واتساپ مواجه شده‌اید، ما می‌توانیم این حساب‌ها را گزارش و مسدود کنیم.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-blue-500 flex items-center justify-center">
+                        <i class="fab fa-telegram text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">خدمات امنیتی تلگرام</h3>
+                        <p class="text-gray-300 mb-4">
+                            ارائه راهکارهای امنیتی برای حساب تلگرام شما، از جمله احراز هویت دو مرحله‌ای و محافظت در برابر هک.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-red-600 flex items-center justify-center">
+                        <i class="fas fa-fish text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">بررسی و حذف کانال‌های فیشینگ</h3>
+                        <p class="text-gray-300 mb-4">
+                            شناسایی و گزارش کانال‌ها و گروه‌های فیشینگ در تلگرام و دیگر پلتفرم‌ها برای محافظت از کاربران.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-purple-600 flex items-center justify-center">
+                        <i class="fas fa-crown text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">خدمات خاص کاربران VIP</h3>
+                        <p class="text-gray-300 mb-4">
+                            ارائه خدمات اختصاصی و پشتیبانی ویژه برای کاربران VIP با نیازهای امنیتی خاص و حساس.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-40 bg-yellow-600 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">مشاوره امنیت سایبری</h3>
+                        <p class="text-gray-300 mb-4">
+                            ارائه مشاوره تخصصی در زمینه امنیت دیجیتال و راهکارهای محافظت از حریم خصوصی در فضای مجازی.
+                        </p>
+                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">درخواست خدمات <i class="fas fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-2">تماس با ما</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold text-white mb-4">راه‌های ارتباطی</h3>
+                    <p class="text-gray-300 mb-6">
+                        برای دریافت خدمات یا مشاوره می‌توانید از طریق راه‌های ارتباطی زیر با ما در تماس باشید. تیم پشتیبانی ما در سریع‌ترین زمان ممکن پاسخگوی شما خواهد بود.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-whatsapp text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium">واتساپ</h4>
+                                <a href="https://wa.me/93790154633" class="text-gray-300 hover:text-blue-400">ارسال پیام مستقیم</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-telegram text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium">تلگرام</h4>
+                                <a href="https://t.me/samir_zone" class="text-gray-300 hover:text-blue-400">@SamirCyber</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-instagram text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium">اینستاگرام</h4>
+                                <a href="https://instagram.com/0xf13_313" class="text-gray-300 hover:text-blue-400">@SamirCyber</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium">ایمیل</h4>
+                                <a href="mailto:info@sc.sczero.com" class="text-gray-300 hover:text-blue-400">info@sc.sczero.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-white mb-4">فرم تماس</h3>
+                        
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-300 mb-2">نام شما</label>
+                            <input type="text" id="name" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="contact" class="block text-gray-300 mb-2">شماره تماس یا ایمیل</label>
+                            <input type="text" id="contact" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="service" class="block text-gray-300 mb-2">خدمات مورد نیاز</label>
+                            <select id="service" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">-- انتخاب کنید --</option>
+                                <option value="whatsapp-ban">رفع بن واتساپ</option>
+                                <option value="whatsapp-report">گزارش تخلف در واتساپ</option>
+                                <option value="telegram-security">خدمات امنیتی تلگرام</option>
+                                <option value="phishing">بررسی و حذف کانال‌های فیشینگ</option>
+                                <option value="vip">خدمات VIP</option>
+                                <option value="consulting">مشاوره امنیت سایبری</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-300 mb-2">پیام شما</label>
+                            <textarea id="message" rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition">ارسال درخواست</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-blue-500 text-2xl ml-2"></i>
+                        <h2 class="text-xl font-bold text-white">SamirCyber</h2>
+                    </div>
+                    <p class="text-gray-400 mt-2">تیم تخصصی امنیت سایبری 313</p>
+                </div>
+                
+                <div class="flex space-x-6 space-x-reverse">
+                    <a href="https://wa.me/93790154633" class="text-gray-400 hover:text-green-400 text-xl">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/samir_zone" class="text-gray-400 hover:text-blue-400 text-xl">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://instagram.com/0xf13_313" class="text-gray-400 hover:text-pink-400 text-xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-500">
+                    © 2023 SamirCyber. تمامی حقوق محفوظ است.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <div class="relative">
+            <b
